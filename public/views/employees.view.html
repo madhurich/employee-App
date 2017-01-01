@@ -1,0 +1,11 @@
+<h1>All Employees Here</h1>
+<button ng-controller="logoutCtrl">
+<span ng-click="onLogout()">Logout</span></button><br>
+<button><a href="/createNewEmployee">Create New Employee</a></button>
+
+<div ng-repeat="x in allEmps">
+	<p><strong>Employee name:</strong> {{x.name}}</p>
+	<p><strong>Email:</strong> {{x.email}}</p>
+	<button><a href="#/update/{{x._id}}">Update Profile</a></button>
+	<button ng-click="deleteEmployee(x._id)">Delete Profile</button>
+</div>

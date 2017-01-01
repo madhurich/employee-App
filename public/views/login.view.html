@@ -1,0 +1,14 @@
+<div>
+	<h1>Login</h1>
+	<p ng-show="message">{{message}}</p>
+	<form ng-submit="onLogin()">
+	  Email:<br>
+	  <input type="email" ng-model="email" name="email"><br>
+	  Password<br>
+	  <input type="password" ng-model="password" name="password"><br>
+	  <button type="submit">Submit here</button>
+	</form>
+	<button><a href="#/forgot">Forgot Password</a></button>
+	
+</div>
+
