@@ -35,10 +35,6 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 				templateUrl: 'views/reset.view.html',
 				controller: 'resetCtrl'
 			})
-			.when('/createNewEmployee', {
-				templateUrl: 'views/createNewEmployee.view.html',
-				controller: 'createNewEmployeeCtrl'
-			})
 			.otherwise({
 				redirectTo: '/'
 			});
