@@ -114,8 +114,11 @@ to store the session id of a user.
 	  			res.status(200) 
 	  			in controllers/getEmployees.js, because already the status has been set, so it can't accept to set the status again, that is the reason you removed the line.
 	  			Refer the 3rd link to look in detail.
+
+	  			*****IMPORTANT*****
 	  4. http://sahatyalkabov.com/how-to-implement-password-reset-in-nodejs/
 	  			to set exp time to passowrds and resetting the password.
+	  			*****IMPORTANT*****
 
 	  5. https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs
 	  Refer 5 to see another approach for jwts
@@ -142,6 +145,9 @@ to store the session id of a user.
 	  FLOW CHART
 	  https://www.ctl.io/developers/blog/post/build-user-authentication-with-node-js-express-passport-and-mongodb	
 
+
+	  apply middleware for post requests
+	  REFER "http://stackoverflow.com/questions/31718100/before-filter-for-all-post-requests-in-node-js"
 
 
 	    	

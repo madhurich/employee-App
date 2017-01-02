@@ -9,17 +9,9 @@ angular.module('myApp')
       	});
     };
 
-    var afterUpdateProfile = function(){
-    	return $http.get('/api/reset/:ptoken', {
-    			headers: {
-	            Authorization: 'Bearer '+ authentication.getToken()
-        	}
-    	});
-    };
 
     return {
-      getProfile : getProfile,
-      afterUpdateProfile: afterUpdateProfile
+      getProfile : getProfile
     };
 
 	}]);

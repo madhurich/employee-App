@@ -1,7 +1,9 @@
 <h1>All Employees Here</h1>
 <button ng-controller="logoutCtrl">
 <span ng-click="onLogout()">Logout</span></button><br>
-<button><a href="/createNewEmployee">Create New Employee</a></button>
+<button><a href="#/createNewEmployee">Create New Employee</a></button>
+
+<p ng-if="newEmployee">{{newEmployee}}</p>
 
 <div ng-repeat="x in allEmps">
 	<p><strong>Employee name:</strong> {{x.name}}</p>

@@ -39,12 +39,12 @@ angular.module('myApp')
       }
     };
 
-    register = function(employee) {
+ /*   register = function(employee) {
       return $http.post('/api/register', employee).success(function(data){
         saveToken(data.token);
 
       });
-    };
+    };*/
 
     login = function(employee) {
       return $http.post('/api/login', employee).success(function(data) {
@@ -74,7 +74,7 @@ angular.module('myApp')
       saveToken : saveToken,
       getToken : getToken,
       isLoggedIn : isLoggedIn,
-      register : register,
+      // register : register,
       login : login,
       logout : logout,
       forgot: forgot,

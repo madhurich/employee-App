@@ -1,0 +1,14 @@
+<p ng-if="message"><strong>{{message}}</strong></p>
+<p ng-if="success"><strong>{{success}}</strong></p>
+<form ng-submit="updatePassword()">
+	New Password: <br>
+	<input type="password" ng-model="newPassword"><br>
+	Confirm Password: <br>
+	<input type="password" ng-model="confirmPassword"><br>
+	Enter your DL Number: <br>
+	<input type="number" ng-model="dl"><br>
+	<button type="submit">Update Password</button>
+	<!-- <p>{{resetReqEmployee}}</p> -->
+</form><br>
+
+<button ng-if="success"><a href="#/login">Login</a></button>

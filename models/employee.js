@@ -16,7 +16,10 @@ var employeeSchema = new mongoose.Schema({
   salt: String,
   roles: Array,
   resetPasswordToken: String,
-  resetPasswordExpires: Date
+  resetPasswordExpires: Date,
+  resetPasswordTokenNewEmp: String,
+  resetPasswordTokenNewEmpExpires: Date,
+  dl: Number
 });
 
 employeeSchema.methods.setPassword = function(password){

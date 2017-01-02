@@ -1,8 +1,9 @@
-<div>
-	<h1>Register here</h1>
-	<p ng-if="message">{{message}}</p>
+<h1>Create New Employee</h1>
+<h3 ng-if="newEmployee">{{newEmployee}}</h3>
+<h3 ng-if="message">{{message}}</h3>
 
-	<form ng-submit="onRegister()">
+<div>
+	<form ng-submit="onCreateNewEmployee()">
 	  Name:<br>
 	  <input type="text" ng-model="name"><br>
 	  Email:<br>
@@ -11,6 +12,8 @@
 	  <input type="password" ng-model="password"><br>
 	  Confirm Password<br>
 	  <input type="password" ng-model="confirmPassword"><br>
-	  <button type="submit">Register</button>
+	  <button type="submit">Create</button>
 	</form>
 </div>
+
+

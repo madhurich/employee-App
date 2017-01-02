@@ -48,6 +48,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
 // Express Validator
 /*app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -77,6 +79,8 @@ app.use(passport.session());
 });*/
 
 app.use('/api', index);
+
+
 //app.use('/employees', employees);
 
 // catch 404 and forward to error handler

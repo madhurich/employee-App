@@ -1,6 +1,6 @@
 angular.module('myApp')
-	.controller('employeesCtrl', ['$scope', 'adminData',
-	 function($scope, adminData){
+	.controller('employeesCtrl', ['$scope', 'adminData', '$location',
+	 function($scope, adminData, $location){
 	 	$scope.allEmps = {};
 
 		adminData.getAllEmployees()
@@ -10,6 +10,7 @@ angular.module('myApp')
 			.error(function (e) {
 			    console.log(e);
 			    console.log("you are not authorized to look into this page");
+			    $location.path('/forbidden');
 			});
 
 		

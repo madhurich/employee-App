@@ -1,0 +1,15 @@
+<div>
+	<h1>Register Request here</h1>
+	<p ng-if="message">{{message}}</p>
+
+	<form ng-submit="onRegisterReq()">
+	  Name:<br>
+	  <input type="text" ng-model="name"><br>
+	  Email:<br>
+	  <input type="email" ng-model="email"><br>
+	  DL Number:<br>
+	  <input type="number" ng-model="dl"><br>
+	  
+	  <button type="submit">Send Request to Admin</button>
+	</form>
+</div>

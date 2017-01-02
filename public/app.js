@@ -15,9 +15,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 				templateUrl: 'views/welcome.view.html',
 				controller: 'welcomeCtrl'
 			})
-			.when('/register', {
-				templateUrl: 'views/register.view.html',
-				controller: 'registerCtrl'
+			.when('/registerReq', {
+				templateUrl: 'views/registerReq.view.html',
+				controller: 'registerReqCtrl'
 			})
 			.when('/get-employees', {
 				templateUrl: 'views/employees.view.html',
@@ -38,6 +38,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			.when('/createNewEmployee', {
 				templateUrl: 'views/createNewEmployee.view.html',
 				controller: 'createNewEmployeeCtrl'
+			})
+			.when('/api/reset/newEmployee/:ptoken', {
+				templateUrl: 'views/resetNewEmployee.view.html',
+				controller: 'resetNewEmployeeCtrl'
+			})
+			.when('/forbidden', {
+				templateUrl: 'views/forbidden.view.html',
+				controller: 'forbiddenCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'
