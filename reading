@@ -150,4 +150,36 @@ to store the session id of a user.
 	  REFER "http://stackoverflow.com/questions/31718100/before-filter-for-all-post-requests-in-node-js"
 
 
+	  -----------------
+	  async.waterfall([
+    function(done) {
+      var smtpTransport = nodemailer.createTransport('SMTP', {
+        service: 'SendGrid',
+        auth: {
+          user: 'madhuri19',
+          pass: 'Madhuri@123'
+        }
+      });
+      var mailOptions = {
+        to: 'madhurichinthakindi332@gmail.com',
+        from: req.body.email,
+        subject: 'Request for Registration of employee',
+        text: 'A new Employee wants to create an account with the following details' +'\n\n' +
+        'Name: ' + req.body.name + '\n\n' + 'Email: ' + req.body.email + '\n\n' + 
+        'DL Number: ' + req.body.dl
+    };
+      smtpTransport.sendMail(mailOptions, function(err) {
+        //req.flash('info', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+        console.log('email sent to Admin');
+        done(err, 'done');
+      });
+    }
+  ], function(err) {
+    if (err) return next(err);
+    //res.redirect('/forgot');
+  });
+    
+};
+
+
 	    	

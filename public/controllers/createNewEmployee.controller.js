@@ -19,7 +19,7 @@ angular.module('myApp')
 	 			})
 	 			.success(function(status){
 	 				console.log(status);
-	 				$rootScope.newEmployee = " Success! An email has been sent to the new employee";
+	 				$rootScope.newEmployee = "An email has been sent to the new employee";
 	 				//$location.path('/get-employees');
 	 				$scope.name = "";
 	 				$scope.email = "";
@@ -27,7 +27,7 @@ angular.module('myApp')
 	 			});
 
 	 		}else{
-	 			$scope.message = 'passwords dint match';
+	 			$scope.message = 'passwords din\'t match';
 	 			$scope.password = "";
 	 			$scope.confirmPassword = "";
 	 		}

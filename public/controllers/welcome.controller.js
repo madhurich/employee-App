@@ -12,6 +12,13 @@ angular.module('myApp')
 			      .error(function (e) {
 			        console.log(e);
 			      });
+			  $scope.isLoggedIn = authentication.isLoggedIn();
+			  
+			  if(authentication.isLoggedIn()){
+			  	console.log("token is still alive");
+			  }else{
+			  	alert("token is expired");
+			  }    
 
 			/*meanData.afterUpdateProfile()
 			      .success(function(data) {
