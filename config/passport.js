@@ -38,6 +38,6 @@ passport.serializeUser(function(employee, done) {
 passport.deserializeUser(function(id, done) {
   Employee.getEmployeeById(id, function(err, employee) {
     done(err, employee);
-    console.log("de-serial "+id);
+    console.log("de-serial id "+id);
   });
 });
